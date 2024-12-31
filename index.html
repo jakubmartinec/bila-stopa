@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bílá Stopa - Aktuální podmínky</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            padding: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #000;
+            background: #fff;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .info-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .info-box h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #000;
+        }
+        .info-box p {
+            margin-bottom: 8px;
+        }
+        .date {
+            color: #666;
+            font-size: 14px;
+        }
+        @media (min-width: 600px) {
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 16px;
+            }
+            .info-box {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bílá Stopa</h1>
+        <p>Aktuální podmínky pro běžecké lyžování</p>
+    </header>
+    
+    <main class="grid">
+        <div class="info-box">
+            <h2>Modravsko</h2>
+            <p class="date">Úterý 31.12.2024 9:15</p>
+            <p>Teplota: -11°C, skoro jasno</p>
+            <p>Sněhová pokrývka: 20 cm přemrzlého sněhu, ve vyšších polohách více</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Železnorudsko</h2>
+            <p class="date">Úterý 31.12.2024</p>
+            <p>Teplota: -6.5°C (Pancíř)</p>
+            <p>Sněhová pokrývka: 90-130 cm dle polohy</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Horská Kvilda</h2>
+            <p class="date">25.12.2024 9:00</p>
+            <p>Teplota: -13°C, jasno</p>
+            <p>Sněhová pokrývka: Informace bude aktualizována</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Zadov, Churáňov</h2>
+            <p class="date">Aktualizace v průběhu dne</p>
+            <p>Sledujte aktuální informace</p>
+        </div>
+    </main>
+</body>
+</html>
