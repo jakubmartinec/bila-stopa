@@ -6,12 +6,66 @@
     <title>Bílá Stopa - Aktuální podmínky</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* ... Previous styles remain the same ... */
-        .last-update {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            padding: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #000;
+            background: #fff;
+        }
+        header {
             text-align: center;
-            font-size: 14px;
-            color: #666;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 24px;
             margin-bottom: 16px;
+        }
+        .info-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            height: 100%;
+            position: relative;
+            padding-bottom: 40px;
+        }
+        .info-box h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #000;
+        }
+        .info-box p {
+            margin-bottom: 8px;
+        }
+        .date {
+            color: #666;
+            font-size: 14px;
+        }
+        .tag {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            color: #0066cc;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        @media (min-width: 600px) {
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 16px;
+            }
+            .info-box {
+                margin-bottom: 0;
+            }
         }
     </style>
 </head>
@@ -19,47 +73,62 @@
     <header>
         <h1>Bílá Stopa</h1>
         <p>Aktuální podmínky pro běžecké lyžování</p>
-        <p class="last-update">Poslední aktualizace: <span id="updateTime"></span></p>
+        <p class="date">Poslední aktualizace: 31.12.2024 13:52</p>
     </header>
     
-    <main class="grid" id="conditionsGrid">
-        <!-- Content will be loaded dynamically -->
+    <main class="grid">
+        <div class="info-box">
+            <h2>Modravsko</h2>
+            <p class="date">Úterý 31.12.2024 9:15</p>
+            <p>Teplota: -11°C, skoro jasno</p>
+            <p>Sněhová pokrývka: 20 cm přemrzlého sněhu, ve vyšších polohách více</p>
+            <p class="tag">#skate</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Prášilsko</h2>
+            <p class="date">31.12.2024</p>
+            <p>Sněhová pokrývka: Aktualizace v průběhu dne</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Srní</h2>
+            <p class="date">31.12.2024</p>
+            <p>Sněhová pokrývka: Aktualizace v průběhu dne</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Železnorudsko</h2>
+            <p class="date">Úterý 31.12.2024</p>
+            <p>Teplota: -6.5°C (Pancíř)</p>
+            <p>Sněhová pokrývka: 90-130 cm dle polohy</p>
+            <p class="tag">#skate</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Stožecko, Strážeňsko, Novopecko</h2>
+            <p class="date">31.12.2024</p>
+            <p>Aktualizace v průběhu dne</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Vimpersko</h2>
+            <p class="date">31.12.2024</p>
+            <p>Aktualizace v průběhu dne</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Zadov, Churáňov, Nové Hutě</h2>
+            <p class="date">31.12.2024</p>
+            <p>Aktualizace v průběhu dne</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Horská Kvilda</h2>
+            <p class="date">25.12.2024 9:00</p>
+            <p>Teplota: -13°C, jasno</p>
+            <p>Sněhová pokrývka: Data budou aktualizována</p>
+        </div>
     </main>
-
-    <script>
-        async function loadConditions() {
-            try {
-                const response = await fetch('data.json');
-                const conditions = await response.json();
-                
-                const grid = document.getElementById('conditionsGrid');
-                grid.innerHTML = ''; // Clear existing content
-                
-                conditions.forEach(condition => {
-                    const box = document.createElement('div');
-                    box.className = 'info-box';
-                    
-                    box.innerHTML = `
-                        <h2>${condition.region}</h2>
-                        <p class="date">${condition.date}</p>
-                        <p>${condition.content}</p>
-                        ${condition.skating ? '<p class="tag">#skate</p>' : ''}
-                    `;
-                    
-                    grid.appendChild(box);
-                });
-                
-                // Update last update time
-                document.getElementById('updateTime').textContent = new Date().toLocaleString('cs-CZ');
-                
-            } catch (error) {
-                console.error('Error loading conditions:', error);
-            }
-        }
-
-        // Load conditions immediately and every 5 minutes
-        loadConditions();
-        setInterval(loadConditions, 5 * 60 * 1000);
-    </script>
 </body>
 </html>
