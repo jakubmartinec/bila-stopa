@@ -1,0 +1,50 @@
+[
+  {
+    "region": "Modravsko",
+    "date": "Úterý 31.12.2024 9:15",
+    "content": "Teplota: -11°C, skoro jasno. Sněhová pokrývka: 20 cm přemrzlého sněhu, ve vyšších polohách více",
+    "skating": true
+  },
+  {
+    "region": "Prášilsko",
+    "date": "31.12.2024",
+    "content": "Sněhová pokrývka: Aktualizace v průběhu dne",
+    "skating": false
+  },
+  {
+    "region": "Srní",
+    "date": "31.12.2024",
+    "content": "Sněhová pokrývka: Aktualizace v průběhu dne",
+    "skating": false
+  },
+  {
+    "region": "Železnorudsko",
+    "date": "Úterý 31.12.2024",
+    "content": "Teplota: -6.5°C (Pancíř). Sněhová pokrývka: 90-130 cm dle polohy",
+    "skating": true
+  },
+  {
+    "region": "Stožecko, Strážeňsko, Novopecko",
+    "date": "31.12.2024",
+    "content": "Aktualizace v průběhu dne",
+    "skating": false
+  },
+  {
+    "region": "Vimpersko",
+    "date": "31.12.2024",
+    "content": "Aktualizace v průběhu dne",
+    "skating": false
+  },
+  {
+    "region": "Zadov, Churáňov, Nové Hutě",
+    "date": "31.12.2024",
+    "content": "Aktualizace v průběhu dne",
+    "skating": false
+  },
+  {
+    "region": "Horská Kvilda",
+    "date": "25.12.2024 9:00",
+    "content": "Teplota: -13°C, jasno. Sněhová pokrývka: Data budou aktualizována",
+    "skating": false
+  }
+]
