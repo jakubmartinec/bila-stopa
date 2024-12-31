@@ -18,9 +18,6 @@ async function fetchData() {
     
     const conditions = [];
     
-    // Debug: Print the entire HTML to see its structure
-    console.log('HTML Content:', response.data.slice(0, 500) + '...');
-    
     // Try different selectors
     $('.aktuality-list > div').each((i, element) => {
       try {
@@ -54,16 +51,34 @@ async function fetchData() {
 
     console.log(`Found ${conditions.length} region updates`);
     
+    // If no new updates found, try to read existing data.json
     if (conditions.length === 0) {
-      throw new Error('No conditions data found on the page');
+      console.log('No new updates found, checking existing data...');
+      try {
+        const existingData = await fs.readFile('data.json', 'utf8');
+        console.log('Using existing data from data.json');
+        // Exit successfully since we're keeping existing data
+        process.exit(0);
+      } catch (err) {
+        // If no existing data.json, create empty one
+        console.log('No existing data.json, creating empty data file');
+        await fs.writeFile('data.json', JSON.stringify([], null, 2));
+        process.exit(0);
+      }
+    } else {
+      // If we found new updates, write them
+      await fs.writeFile('data.json', JSON.stringify(conditions, null, 2));
+      console.log('New data successfully written to data.json');
     }
-
-    await fs.writeFile('data.json', JSON.stringify(conditions, null, 2));
-    console.log('Data successfully written to data.json');
     
   } catch (error) {
     console.error('Error details:', error);
     console.error('Stack trace:', error.stack);
+    // Don't exit with error if it's just a connection issue
+    if (error.code === 'ECONNREFUSED' || error.code === 'ENOTFOUND') {
+      console.log('Connection issue, keeping existing data');
+      process.exit(0);
+    }
     process.exit(1);
   }
 }
