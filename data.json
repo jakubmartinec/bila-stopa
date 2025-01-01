@@ -1,9 +1,122 @@
 [
   {
-    "region": "Aktuální zpravodajství",
-    "date": "1.1.20251.1.202531.12.202431.12.202431.12.202431.12.202430.12.202430.12.202430.12.202430.12.202429.12.202429.12.202429.12.202428.12.202428.12.202428.12.202428.12.202428.12.202428.12.202427.12.2024",
-    "content": "Zde si vyberte požadovanou trasu:\nRubriky\n\tVybrat rubriku\n\tBlanský Les  (8)\n\tBorovoladsko  (355)\n\tFrymburk  (9)\n\tHamry  (62)\n\tHartmanicko, Keply, Zhůří  (265)\n\tHornoplánsko  (9)\n\tHornovltavicko  (4)\n\tHorská Kvilda  (166)\n\tKašperskohorsko  (45)\n\tKubova Huť  (11)\n\tKvildsko  (764)\n\tLipensko  (79)\n\tModravsko  (795)\n\tPrášilsko  (95)\n\tSrní  (196)\n\tStožecko, Strážeňsko, Novopecko  (424)\n\tVimpersko  (4)\n\tZadov, Churáňov, Nové Hutě  (442)\n\tŽeleznorudsko  (690)\n\n\n/* <![CDATA[ */\n            var ec_dropdown_2 = document.getElementById(\"extended-categories-select-2\");\n            function ec_onCatChange_2() {\n                if (ec_dropdown_2.options[ec_dropdown_2.selectedIndex].value > 0) {\n                    location.href = \"https://bilastopa.cz/?cat=\"+ec_dropdown_2.options[ec_dropdown_2.selectedIndex].value;\n                }\n            }\n            ec_dropdown_2.onchange = ec_onCatChange_2;\n/* ]]&gt; */\n\n\n \nNejnovější zprávy z Bílé stopy:\n.rpwe-block ul{\nlist-style: none !important;\nmargin-left: 0 !important;\npadding-left: 0 !important;\n}\n\n.rpwe-block li{\nborder-bottom: 1px solid #eee;\nmargin-bottom: 10px;\npadding-bottom: 10px;\nlist-style: none !important;\n}\n\n.rpwe-block a{\ndisplay: inline !important;\ntext-decoration: none;\n}\n\n.rpwe-block h3{\nbackground: none !important;\nclear: none;\nmargin-bottom: 0 !important;\nmargin-top: 0 !important;\nfont-weight: 400;\nfont-size: 13px !important;\nline-height: 1.5em;\n}\n\n.rpwe-thumb{\nborder: 1px solid #eee !important;\nbox-shadow: none !important;\nmargin: 2px 10px 2px 0;\npadding: 3px !important;\n}\n\n.rpwe-summary{\nfont-size: 12px;\n}\n\n.rpwe-time{\n\nfont-size: 13px;\n}\n\n.rpwe-alignleft{\ndisplay: inline;\nfloat: left;\n}\n\n.rpwe-alignright{\ndisplay: inline;\nfloat: right;\n}\n\n.rpwe-aligncenter{\ndisplay: block;\nmargin-left: auto;\nmargin-right: auto;\n}\n\n.rpwe-clearfix:before,\n.rpwe-clearfix:after{\ncontent: &quot;&quot;;\ndisplay: table !important;\n}\n\n.rpwe-clearfix:after{\nclear: both;\n}\n\n.rpwe-clearfix{\nzoom: 1;\n}\nModravsko1.1.2025Středa 1.1.2025 10:20 hod. na Modravě 1.09 °C, oblačno, 20 cm přemrzlého sněhu, ve vyšších polohách sněhu více   30.12. …Aktuálně ze Zadova, Churáňova a Nových Hutí1.1.2025Středa 1. 1. 2025, 8.00 hod. Přejeme úspěšné vykročení do lyžařských tras v novém roce 2025… Na Zadově – Churáňově …Modravsko31.12.2024Úterý 31.12.2024 9:15 hod. na Modravě -11°C, skoro jasno, 20 cm přemrzlého sněhu, ve vyšších polohách sněhu více   včera …Železnorudsko31.12.2024Běžecké stopy 31.12.2024  Na Železnorudsku je jasno. Teploty v 8:30 hod. jsou v rozmezí – 4,3 °C v Železné Rudě …Horská Kvilda31.12.2024Úterý 31.12.2024, 8:45 hod. Na Horské Kvildě je dnes jasno, slunečno, teplota -12°C, výška sněhu do 15 cm. Trasy v …Kvidsko31.12.2024Pondělí 31. 12. 2024, 9:35 hod. Na Kvildě je jasno, teplota – 6°C. Celková výška sněhové pokrývky do 20 cm. …Aktuálně ze Zadova, Churáňova a Nových Hutí30.12.2024Pondělí 30. 12. 2024, 9.50 hod. Na Zadově – Churáňově je jasno, 2 °C, výška okolního sněhu: do 16 cm, …Modravsko30.12.2024pondělí 30.12.2024 9:15 hod. Modrava -8,8°C, jasno, do 20 cm přemrzlého sněhu, ve vyšších polohách je sněhu více   dnes …Kvildsko30.12.2024Pondělí 30. 12. 2024, 9:00 hod. Na Kvildě je jasno, teplota – 3°C. Celková výška sněhové pokrývky okolo 20 cm. …Železnorudsko30.12.2024Běžecké stopy 30.12.2024  – polojasno, v nižších polohách mlhy. Teploty v 8:30 hod. jsou v rozmezí – 3,5 °C v …Prášilsko29.12.2024Neděle 29. 12. 2024, 10:45, jasno,  – 2°C, sníh 15 – 40 cm (na hřebenech) Poslední strojová úprava okruhu Poledník …Modravsko29.12.2024NEDĚLE 29.12.2024  8:45  Aktuální počasí na Modravě: jasno, slunečno, beze srážek, teplota – 10 °C, vítr 14 km/h, vlhkost 75,9%,  …Kvildsko29.12.2024Neděle 29. 12. 2024, 9:00 hod. Na Kvildě je jasno, teplota – 5°C. Celková výška sněhové pokrývky okolo 20 cm. …Horská Kvilda28.12.2024Sobota, 28.12.2024, 10:00 hod. Na Horské Kvildě je dnes jasno, slunečno, teplota -6°C, výška sněhu do 20 cm. Ve středu …Železnorudsko28.12.2024Běžecké stopy 28.12.2024Borovoladsko28.12.2024Sobota 28.12.2024, 9:00 hodin. Jasno.  Teplota -9°C.  Výška sněhové pokrývky cca 20 cm, ve vyšších polohách více.   V pátek …Modravsko28.12.2024SOBOTA 28.12.2024  8:40  Aktuální počasí na Modravě: jasno, teplota – 9,7 °C, vítr 5 km/h, vlhkost 51%,  výška sněhu 19cm, …Kvildsko28.12.2024Sobota 28. 12. 2024, 8:15 hod. Na Kvildě je jasno, teplota – 6°C. Celková výška sněhové pokrývky do 20 cm. …Aktuálně ze Zadova, Churáňova a Nových Hutí28.12.2024Sobota 28. 12. 2024, 8.00 hod. Na Zadově – Churáňově je jasno, 3 °C, výška okolního sněhu: do 16 cm, …Modravsko27.12.2024PÁTEK 27.12.2024 14:30  Aktuální počasí na  Modravě: skoro jasno, +9 st. C, vítr 5 km/h, 20 cm sněhu, ve vyšších …\nStarší příspěvky najdete zde.",
-    "skating": false,
-    "lastUpdate": "2025-01-01T09:54:01.786Z"
+    "region": "Modravsko",
+    "date": "1.1.2025",
+    "content": "Středa 1.1.2025 10:20 hod. na Modravě 1.09 °C, oblačno, 20 cm přemrzlého sněhu, ve vyšších polohách sněhu více   30.12. …",
+    "skating": false
+  },
+  {
+    "region": "Aktuálně ze Zadova, Churáňova a Nových Hutí",
+    "date": "1.1.2025",
+    "content": "Středa 1. 1. 2025, 8.00 hod. Přejeme úspěšné vykročení do lyžařských tras v novém roce 2025… Na Zadově – Churáňově …",
+    "skating": false
+  },
+  {
+    "region": "Modravsko",
+    "date": "31.12.2024",
+    "content": "Úterý 31.12.2024 9:15 hod. na Modravě -11°C, skoro jasno, 20 cm přemrzlého sněhu, ve vyšších polohách sněhu více   včera …",
+    "skating": false
+  },
+  {
+    "region": "Železnorudsko",
+    "date": "31.12.2024",
+    "content": "Běžecké stopy 31.12.2024  Na Železnorudsku je jasno. Teploty v 8:30 hod. jsou v rozmezí – 4,3 °C v Železné Rudě …",
+    "skating": false
+  },
+  {
+    "region": "Horská Kvilda",
+    "date": "31.12.2024",
+    "content": "Úterý 31.12.2024, 8:45 hod. Na Horské Kvildě je dnes jasno, slunečno, teplota -12°C, výška sněhu do 15 cm. Trasy v …",
+    "skating": false
+  },
+  {
+    "region": "Kvidsko",
+    "date": "31.12.2024",
+    "content": "Pondělí 31. 12. 2024, 9:35 hod. Na Kvildě je jasno, teplota – 6°C. Celková výška sněhové pokrývky do 20 cm. …",
+    "skating": false
+  },
+  {
+    "region": "Aktuálně ze Zadova, Churáňova a Nových Hutí",
+    "date": "30.12.2024",
+    "content": "Pondělí 30. 12. 2024, 9.50 hod. Na Zadově – Churáňově je jasno, 2 °C, výška okolního sněhu: do 16 cm, …",
+    "skating": false
+  },
+  {
+    "region": "Modravsko",
+    "date": "30.12.2024",
+    "content": "pondělí 30.12.2024 9:15 hod. Modrava -8,8°C, jasno, do 20 cm přemrzlého sněhu, ve vyšších polohách je sněhu více   dnes …",
+    "skating": false
+  },
+  {
+    "region": "Kvildsko",
+    "date": "30.12.2024",
+    "content": "Pondělí 30. 12. 2024, 9:00 hod. Na Kvildě je jasno, teplota – 3°C. Celková výška sněhové pokrývky okolo 20 cm. …",
+    "skating": false
+  },
+  {
+    "region": "Železnorudsko",
+    "date": "30.12.2024",
+    "content": "Běžecké stopy 30.12.2024  – polojasno, v nižších polohách mlhy. Teploty v 8:30 hod. jsou v rozmezí – 3,5 °C v …",
+    "skating": false
+  },
+  {
+    "region": "Prášilsko",
+    "date": "29.12.2024",
+    "content": "Neděle 29. 12. 2024, 10:45, jasno,  – 2°C, sníh 15 – 40 cm (na hřebenech) Poslední strojová úprava okruhu Poledník …",
+    "skating": false
+  },
+  {
+    "region": "Modravsko",
+    "date": "29.12.2024",
+    "content": "NEDĚLE 29.12.2024  8:45  Aktuální počasí na Modravě: jasno, slunečno, beze srážek, teplota – 10 °C, vítr 14 km/h, vlhkost 75,9%,  …",
+    "skating": false
+  },
+  {
+    "region": "Kvildsko",
+    "date": "29.12.2024",
+    "content": "Neděle 29. 12. 2024, 9:00 hod. Na Kvildě je jasno, teplota – 5°C. Celková výška sněhové pokrývky okolo 20 cm. …",
+    "skating": false
+  },
+  {
+    "region": "Horská Kvilda",
+    "date": "28.12.2024",
+    "content": "Sobota, 28.12.2024, 10:00 hod. Na Horské Kvildě je dnes jasno, slunečno, teplota -6°C, výška sněhu do 20 cm. Ve středu …",
+    "skating": false
+  },
+  {
+    "region": "Železnorudsko",
+    "date": "28.12.2024",
+    "content": "Běžecké stopy 28.12.2024",
+    "skating": false
+  },
+  {
+    "region": "Borovoladsko",
+    "date": "28.12.2024",
+    "content": "Sobota 28.12.2024, 9:00 hodin. Jasno.  Teplota -9°C.  Výška sněhové pokrývky cca 20 cm, ve vyšších polohách více.   V pátek …",
+    "skating": false
+  },
+  {
+    "region": "Modravsko",
+    "date": "28.12.2024",
+    "content": "SOBOTA 28.12.2024  8:40  Aktuální počasí na Modravě: jasno, teplota – 9,7 °C, vítr 5 km/h, vlhkost 51%,  výška sněhu 19cm, …",
+    "skating": false
+  },
+  {
+    "region": "Kvildsko",
+    "date": "28.12.2024",
+    "content": "Sobota 28. 12. 2024, 8:15 hod. Na Kvildě je jasno, teplota – 6°C. Celková výška sněhové pokrývky do 20 cm. …",
+    "skating": false
+  },
+  {
+    "region": "Aktuálně ze Zadova, Churáňova a Nových Hutí",
+    "date": "28.12.2024",
+    "content": "Sobota 28. 12. 2024, 8.00 hod. Na Zadově – Churáňově je jasno, 3 °C, výška okolního sněhu: do 16 cm, …",
+    "skating": false
+  },
+  {
+    "region": "Modravsko",
+    "date": "27.12.2024",
+    "content": "PÁTEK 27.12.2024 14:30  Aktuální počasí na  Modravě: skoro jasno, +9 st. C, vítr 5 km/h, 20 cm sněhu, ve vyšších …",
+    "skating": false
   }
 ]
