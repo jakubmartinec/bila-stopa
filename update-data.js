@@ -4,31 +4,42 @@ const fs = require('fs');
 const util = require('util');
 const writeFile = util.promisify(fs.writeFile);
 
+async function fetchPage(page = 1) {
+    const url = `https://bilastopa.cz/cs/aktualni-zpravodajstvi/page/${page}/`;
+    const response = await axios.get(url);
+    const $ = cheerio.load(response.data);
+    
+    const items = [];
+    $('.rpwe-block li').each((i, element) => {
+        const title = $(element).find('h3.rpwe-title a').text().trim();
+        const content = $(element).find('.rpwe-summary').text().trim();
+        const date = $(element).find('time').text().trim();
+        
+        if (title && content && date.includes('2024')) {
+            items.push({
+                region: title,
+                date: date,
+                content: content,
+                skating: /brusl|skate|styl volný/i.test(content)
+            });
+        }
+    });
+    return items;
+}
+
 async function fetchData() {
     try {
         console.log('🔍 DEBUG START: Script initialization');
-        const response = await axios.get('https://bilastopa.cz/cs/aktualni-zpravodajstvi/');
-        const $ = cheerio.load(response.data);
         const conditions = [];
-
-        // Parse and collect data
-        $('.rpwe-block li').each((i, element) => {
-            const title = $(element).find('h3.rpwe-title a').text().trim();
-            const content = $(element).find('.rpwe-summary').text().trim();
-            const date = $(element).find('time').text().trim();
-            
-            if (title && content) {
-                conditions.push({
-                    region: title,
-                    date: date,
-                    content: content,
-                    skating: content.toLowerCase().includes('bruslení')
-                });
-            }
-        });
+        
+        for (let page = 1; page <= 5; page++) {
+            console.log(`📄 Fetching page ${page}`);
+            const items = await fetchPage(page);
+            conditions.push(...items);
+            if (items.length === 0) break;
+        }
 
         if (conditions.length > 0) {
-            // Generate HTML
             const html = `<!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -98,12 +109,11 @@ async function fetchData() {
 </body>
 </html>`;
 
-            // Write both files
             await Promise.all([
                 writeFile('data.json', JSON.stringify(conditions, null, 2)),
                 writeFile('index.html', html)
             ]);
-            console.log('✅ Updated both data.json and index.html');
+            console.log(`✅ Updated both files with ${conditions.length} entries`);
         }
     } catch (error) {
         console.error('❌ Error:', error);
