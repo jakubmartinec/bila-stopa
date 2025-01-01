@@ -1,9 +1,35 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const fs = require('fs').promises;
+const fs = require('fs');
+const util = require('util');
+const writeFile = util.promisify(fs.writeFile);
 
-async function generateHTML(conditions) {
-    const html = `<!DOCTYPE html>
+async function fetchData() {
+    try {
+        console.log('🔍 DEBUG START: Script initialization');
+        const response = await axios.get('https://bilastopa.cz/cs/aktualni-zpravodajstvi/');
+        const $ = cheerio.load(response.data);
+        const conditions = [];
+
+        // Parse and collect data
+        $('.rpwe-block li').each((i, element) => {
+            const title = $(element).find('h3.rpwe-title a').text().trim();
+            const content = $(element).find('.rpwe-summary').text().trim();
+            const date = $(element).find('time').text().trim();
+            
+            if (title && content) {
+                conditions.push({
+                    region: title,
+                    date: date,
+                    content: content,
+                    skating: content.toLowerCase().includes('bruslení')
+                });
+            }
+        });
+
+        if (conditions.length > 0) {
+            // Generate HTML
+            const html = `<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
@@ -71,48 +97,13 @@ async function generateHTML(conditions) {
     </main>
 </body>
 </html>`;
-    await fs.writeFile('index.html', html);
-}
 
-async function fetchData() {
-    try {
-        console.log('🔍 DEBUG START: Script initialization');
-        const response = await axios.get('https://bilastopa.cz/cs/aktualni-zpravodajstvi/', {
-            headers: {'User-Agent': 'Mozilla/5.0 Chrome/91.0.4472.124'}
-        });
-
-        console.log('📄 DEBUG: Parsing webpage');
-        const $ = cheerio.load(response.data);
-        const conditions = [];
-
-        $('.rpwe-block li').each((i, element) => {
-            try {
-                const title = $(element).find('.rpwe-title').text().trim();
-                const content = $(element).find('.rpwe-summary').text().trim();
-                const date = $(element).find('time').text().trim();
-
-                console.log(`📌 Found entry: ${title} (${date})`);
-                
-                if (title && content) {
-                    conditions.push({
-                        region: title,
-                        date: date,
-                        content: content,
-                        skating: content.toLowerCase().includes('bruslení'),
-                    });
-                }
-            } catch (err) {
-                console.error('❌ Error parsing entry:', err);
-            }
-        });
-
-        if (conditions.length > 0) {
-            console.log(`✅ Found ${conditions.length} updates`);
-            await fs.writeFile('data.json', JSON.stringify(conditions, null, 2));
-            await generateHTML(conditions);
-            console.log('✅ Updated data.json and index.html');
-        } else {
-            console.log('⚠️ No updates found');
+            // Write both files
+            await Promise.all([
+                writeFile('data.json', JSON.stringify(conditions, null, 2)),
+                writeFile('index.html', html)
+            ]);
+            console.log('✅ Updated both data.json and index.html');
         }
     } catch (error) {
         console.error('❌ Error:', error);
